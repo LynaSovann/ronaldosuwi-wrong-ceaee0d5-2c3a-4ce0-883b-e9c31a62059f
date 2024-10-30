@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: ronaldosuwi-wrong-ceaee0d5-2c3a-4ce0-883b-e9c31a62059f-certificate
+  namespace: ronaldosuwi-wrong-ceaee0d5-2c3a-4ce0-883b-e9c31a62059f
+spec:
+  secretName: ronaldosuwi-wrong-ceaee0d5-2c3a-4ce0-883b-e9c31a62059f-secret-tls
+  commonName: thanak81-ronaldosuwi-wrong.assessify.org
+  dnsNames:
+  - thanak81-ronaldosuwi-wrong.assessify.org
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
