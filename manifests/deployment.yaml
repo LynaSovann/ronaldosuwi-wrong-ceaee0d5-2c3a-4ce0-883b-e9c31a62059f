@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ronaldosuwi-wrong-ceaee0d5-2c3a-4ce0-883b-e9c31a62059f-deployment
+  labels:
+    app: ronaldosuwi-wrong-ceaee0d5-2c3a-4ce0-883b-e9c31a62059f
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ronaldosuwi-wrong-ceaee0d5-2c3a-4ce0-883b-e9c31a62059f
+  template:
+    metadata:
+      labels:
+        app: ronaldosuwi-wrong-ceaee0d5-2c3a-4ce0-883b-e9c31a62059f
+    spec:
+      containers:
+        - name: ronaldosuwi-wrong-ceaee0d5-2c3a-4ce0-883b-e9c31a62059f-container
+          image: pipejet/ronaldosuwi-wrong-ceaee0d5-2c3a-4ce0-883b-e9c31a62059f:latest
+          ports:
+            - containerPort: 3000
