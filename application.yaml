@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ronaldosuwi-wrong-ceaee0d5-2c3a-4ce0-883b-e9c31a62059f
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/LynaSovann/ronaldosuwi-wrong-ceaee0d5-2c3a-4ce0-883b-e9c31a62059f.git
+    targetRevision: main
+    path: manifests
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: ronaldosuwi-wrong-ceaee0d5-2c3a-4ce0-883b-e9c31a62059f
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+  revisionHistoryLimit: 5
